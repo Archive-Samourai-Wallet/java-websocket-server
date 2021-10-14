@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.samourai.code.wallet</groupId>
 	<artifactId>java-websocket-server</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>java-websocket-server</name>
 	<properties>
 		<project.scm.id>samourai</project.scm.id>
@@ -112,6 +112,6 @@
 	</repositories>
 	<scm>
 		<connection>scm:git:https://code.samourai.io/whirlpool/java-websocket-server.git</connection>
-		<tag>1.0.0</tag>
+		<tag>1.0.1</tag>
 	</scm>
 </project>
