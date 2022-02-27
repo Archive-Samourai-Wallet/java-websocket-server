@@ -69,9 +69,19 @@ public abstract class JWSSWebSocketConfigurationSupport
 
   @Override
   public void registerStompEndpoints(StompEndpointRegistry registry) {
+    if (log.isDebugEnabled()) {
+      log.debug("+ STOMP endpoints: " + config.getWebsocketEndpoints());
+    }
+    // standard websocket
     registry
         .addEndpoint(config.getWebsocketEndpoints())
-        .setAllowedOrigins("*")
+        .setAllowedOriginPatterns("*")
+        .addInterceptors(new JWSSIpHandshakeInterceptor());
+
+    // sockjs support
+    registry
+        .addEndpoint(config.getWebsocketEndpoints())
+        .setAllowedOriginPatterns("*")
         .addInterceptors(new JWSSIpHandshakeInterceptor())
         .withSockJS();
   }

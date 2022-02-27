@@ -3,9 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.samourai.code.wallet</groupId>
 	<artifactId>java-websocket-server</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4-SNAPSHOT</version>
 	<name>java-websocket-server</name>
 	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.scm.id>samourai</project.scm.id>
 		<spring-boot.version>2.6.2</spring-boot.version>
 		<spring-websocket.version>5.3.14</spring-websocket.version>
